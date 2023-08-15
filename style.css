@@ -1,0 +1,794 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: BankGothic Md BT;
+    src: url(./Fonts/bank\ gothic\ medium\ bt.ttf);
+}
+body {
+    background-color: rgba(24, 0, 43, 1);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*Re-Usable Codes begins*/
+.border {
+    border: 1px solid red;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.1px;
+}
+a, button {
+    cursor: pointer;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bankgothicfont {
+    font-family: BankGothic Lt BT, Geneva, Verdana, sans-serif;
+}
+.text-align-center {
+    text-align: center;
+}
+.display-none {
+    display: none;
+}
+/*Re-Usable Codes end*/
+
+
+
+.jumbotron_img {
+    background-image: url(./images/homeImagenew.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    height: 13vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+header .logo span {
+    width: 50px;
+    font-weight: bold;
+    font-size: 3rem;
+    color: rgb(20, 137, 247);
+    color:rgb(196, 124, 251);
+}
+
+header a {
+    text-decoration: none;
+}
+    
+
+
+header .logo {
+    border-left: 3px solid white;
+    border-top: 3px solid white;
+    border-radius: 9px;
+
+    color:white; 
+    text-shadow: 1px 1px 1px black;
+    width: 38px;
+    height: 35px;
+    font-weight: 900;
+    font-size: .9rem;
+    line-height: 15px;
+    align-items: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+nav {
+    visibility: hidden;
+    color: white;
+    width: 50%;
+    max-width: 400px;
+}
+
+nav ul {
+    list-style: none;
+    font-size: .8rem;
+}
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+    color: white;
+}
+nav a:hover {
+    color: rgb(201, 137, 249);
+    font-weight: bold;
+}
+nav.mobile-nav {
+    visibility: visible;
+    width: 100%;
+}
+.justify-center {
+    justify-content: center;
+}
+header button {
+    width: 110px;
+    height: 35px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    background-color: rgba(183, 90, 255, 1);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+header button:hover {
+    color: rgb(161, 41, 253);
+    background-color: white;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px white;
+}
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE HEADER SECTION */
+    nav {
+        visibility: visible;
+    }
+    nav.mobile-nav {
+        visibility: hidden;
+    }
+    
+  }
+
+/* HOME PAGE */
+.home .jumbotron {
+    height: 280px;
+    width: 100%;
+}
+.home .jumbotron h1.web3{
+    font-size: 5.3rem;
+    text-align: center;
+    color: rgba(183, 90, 255, 1);
+    font-family: BankGothic Md BT;
+    font-size: 5rem;
+    margin-top: 70px;
+}
+.home .jumbotron h1.conf {
+    color: rgba(255, 255, 255, 0.879);
+    text-align: center;
+    /* font-size: 4.9rem; */
+    font-size: 2.9rem;
+    margin-bottom: 20px;
+    
+}
+
+.home section button{
+    width: 170px;
+    height: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.947);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.home section a button span{
+    font-size: 23px;
+}
+.home .location {
+    justify-content: center;
+    gap: 200px;
+}
+.home .location h3{
+    font-size: 20px;
+    text-shadow: 2px 2px 1px black;
+    color: white;
+}
+/* .home .viewlocation{
+    display: inline-block;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.879);
+    font-weight: bolder;
+    text-decoration: none;
+    width: 170px;
+   border: 1.5px solid rgba(255, 255, 255, 0.648); 
+    border-radius: 10px;
+    padding: 3px 10px;
+    letter-spacing: 2px;
+    color: rgb(76, 3, 137);
+    background-color: rgba(255, 255, 255, 0.95);
+    font-size: .85rem;
+} */
+.home .countdown {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 160px; 
+    justify-content: center;
+    background-color: rgba(26, 25, 25, 0.728);
+    margin-bottom: 25px;
+
+}
+.home .countdowntext p {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 500px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.879);
+}
+.home .counting {
+    width: 350px;
+}
+.home .counting div{
+    width: 63px;
+    height: 60px;
+    border: 1.5px solid rgba(183, 90, 255, 1);
+    padding-top: 13px;
+}
+.home .counting p {
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 17px;
+    color:rgba(183, 90, 255, 1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.home .counting p span {
+    color: white;
+    font-size: .7rem;
+    font-weight: 100;
+}
+.home a {
+    text-decoration: none;
+    color: black;
+}
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE HOME SECTION */
+    .home .jumbotron {
+        height: 260px;
+    }
+    .home .jumbotron h1.web3 span{
+        font-size: 6rem;
+        margin-bottom: 25px;
+    }
+    .home .jumbotron h1.conf {
+        font-size: 4.9rem; 
+        line-height: 0px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    
+    .location {
+        display: flex;
+        gap: 0px;
+    }
+    .home .countdown {
+        height: 135px; 
+    }
+  }
+
+
+/* ABOUT SECTION */
+.gradient {
+    background-image: linear-gradient(to top,rgba(24, 0, 43, 1), rgba(245, 245, 245, 0.87));
+}
+.gradient2 {
+    background-image: linear-gradient(to top,rgba(24, 0, 43, 1), rgba(245, 245, 245, 0.87));
+}
+.about {
+    /* background-image: linear-gradient(rgba(245, 245, 245, 1),rgba(24, 0, 43, 1)); */
+    color: black;
+    font-weight: 700;
+    padding-top: 50px;
+    font-size: 1.9rem;
+}
+.about .aboutstyle {
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.about .aboutstyle .box1 {
+    width: 30px;
+    height: 10px;
+    border-bottom: 4px solid black;
+}
+.about .aboutstyle .box2 {
+    width: 45px;
+    height: 19px;
+    border-bottom: 4px solid rgba(183, 90, 255, 1);
+}
+/* .about .aboutsections {
+    align-items: flex-start;
+}  */
+.about .imgctn {
+    background-image: url(./images/aboutimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height : 500px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.about .abouttext {
+    width: 100%;   
+}
+.about h6 {
+    font-size: 1.4rem;
+}
+.about p {
+    /* border: 1px solid red; */
+    font-size: 1rem;
+    text-align: justify;
+    font-weight: 100;
+}
+/* .about .abouttext button {
+    width: 100px;
+    height: 30px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: rgba(183, 90, 255, 1);
+} */
+
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE ABOUT SECTION */
+    
+    .aboutsections {
+        display: flex;
+        justify-content: space-between;
+    }
+    .about .imgctn {
+        width: 48%;
+    }
+    .about .abouttext {
+        width: 48%;   
+    }
+  }
+
+
+/* SPEAKERS SECTION */
+
+.speakers {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 1.9rem;
+}
+.speakers h2{
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.879);
+}
+.speakers p{
+    font-size: .8rem;
+    font-weight: lighter;
+    width: 250px;
+    margin-left: 5px;
+    margin-top: 5px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.879);
+}
+.socialaccount {
+    width: 100px;
+}
+.speakers h6{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.879);
+}
+
+.speakers .speakersimgctn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+.speakers .speakersimg {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.speakerimgdesign {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE SPEAKERS SECTION */
+    .speakers .speakersimgctn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+  }
+.speakers .speakersimg1 {
+    background-image: url(./images/speakers/Speaker1.png);
+    background-position: center;
+    height: 350px;
+}
+.speakers .speakersimg2 {
+    background-image: url(./images/speakers/Speaker2.png);
+    background-position: center;
+    height: 350px;
+}
+.speakers .speakersimg3 {
+    background-image: url(./images/speakers/Speaker3.png);
+    background-position: center;
+    height: 350px;
+}
+.speakers .speakersimg4 {
+    background-image: url(./images/Cornelius.jpg);
+}
+.speakers .speakersimg5 {
+    background-image: url(./images/Kelechi.png);
+}
+.speakers .speakersimg6 {
+    background-image: url(./images/Daniella.jpg);
+}
+.speakers .speakersimg7 {
+    background-image: url(./images/ferdinard.png);
+}
+.speakers .speakersimg8 {
+    background-image: url(./images/Forget.png);
+}
+.speakers .dontmiss {
+    color: rgba(183, 90, 255, 0.87);
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 1px;
+}
+.speakers .speakerstxt1 {
+    width: 220px;
+    line-height: 20px;
+}
+.speakers .speakerstxt1 span {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+
+/* ORGANIZING TEAM SECTION */
+
+.organizingteam {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 1.9rem;
+}
+.organizingteam h2{
+    font-weight: 700;
+    color: black;
+    margin-bottom: 70px;
+}
+.organizingteam p{
+    font-size: .8rem;
+    font-weight: lighter;
+    width: 250px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.879);
+}
+.organizingteam h6{
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.879);
+}
+
+.organizingteam .organizingteamimgctn {
+    justify-content: space-evenly;
+    margin-top: 35px;
+}
+.organizingteam .organizingteamimg {
+    flex-direction: column;
+    justify-content: center;
+
+}
+.organizingteamchairimgdesign {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+.organizingteamimgdesign {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    margin-bottom: 15px;
+}
+.organizingteamimgctn .margin-bottom {
+    margin-bottom: 25px;
+}
+.organizingset {
+    justify-content: space-around;
+    align-items: center;
+}
+@media only screen and (min-width: 800px) {
+    /* RESPONSIVENESS FOR THE ORGANIZING TEAM SECTION */
+    .organizingteam .organizingteamimgctn {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .organizingset {
+        justify-content: space-around;
+        width: 50%;
+    }
+    .organizingteamimgctn .margin-bottom {
+        margin-bottom: 0px;
+    }
+  }
+
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE VENUE SECTION */
+    .venuectn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sopstheatre {
+        width: 48%;
+    }
+    .maplocation {
+        width: 48%;
+    }
+  }
+.organizingteamchairimg {
+    background-image: url(./images/organizeteam/amadi.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg1 {
+    background-image: url(./images/organizeteam/orgteam1.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg2 {
+    background-image: url(./images/organizeteam/orgteam2.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg3 {
+    background-image: url(./images/organizeteam/orgteam3.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg4 {
+    background-image: url(./images/organizeteam/orgteam4.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg5 {
+    background-image: url(./images/organizeteam/orgteam5.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg6 {
+    background-image: url(./images/organizeteam/orgteam6.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg7 {
+    background-image: url(./images/organizeteam/orgteam7.png);
+    background-position: center;
+}
+.organizingteam .organizingteamimg8 {
+    background-image: url(./images/organizeteam/orgteam8.png);
+    background-position: center;
+}
+.organizingteam .dontmiss {
+    color: rgba(183, 90, 255, 0.87);
+    line-height: 60px;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke-width: 1px;
+}
+.organizingteam .organizingteamtxt1 {
+    width: 150px;
+}
+.organizingteam .organizingteamtxt1 {
+    width: 220px;
+    line-height: 20px;
+    color: white;
+}
+.organizingteam .organizingteamtxt1 span {
+    font-weight: bold;
+    font-size: .9rem;
+}
+
+
+/* TICKETS */
+/* 
+.ticketsbg {
+    background-image: url(./images/ticketsbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+    font-size: 1.9rem;
+}
+.tickets .getticket {
+    font-size: .8rem;
+    font-weight: 100;
+    margin-top: 20px;
+}
+.ticketsctn {
+    margin-top: 30px;
+    padding-bottom: 70px;
+}
+.ticket1 {
+    width: 27%;
+    background-color: black;
+    border-radius: 40px;
+    height: 350px;
+    flex-direction: column;
+    justify-content: center;
+}
+.ticket1border {
+    width: 65%; 
+    height: 80%; 
+}
+.tickettxtctn {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 80%;
+}
+.tickets .tickettxtctn h6 {
+    font-size: 1.2rem;
+}
+.tickets .tickettxtctn h5 {
+    font-size: 4.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.tickets .tickettxtctn h5 sup {
+    font-size: 1.5rem;
+}
+.tickets .tickettxtctn p {
+    font-size:  .9rem;
+    padding-top: 5px;
+    color: rgba(255, 255, 255, 0.879);   
+}
+.tickets .tickettxt {
+    width: 60%;
+    margin: auto;
+    text-align: start;
+}
+.tickets button {
+        color: black;
+        margin-top: 15px;
+        font-weight: bold;
+        width: 100%;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.879);
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        font-size: 1.1rem;
+}
+.tickets button:hover {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.text-purple {
+    color: rgba(183, 90, 255, 0.87);
+}
+.border-left-purple {
+    border-left: 3px solid rgba(183, 90, 255, 0.87);
+}
+.text-green {
+    color: rgba(37, 174, 3, 1);
+}
+.border-left-green {
+    border-left: 3px solid rgba(37, 174, 3, 1);
+}
+
+.text-blue {
+    color: rgba(26, 117, 254, 1);
+}
+.border-left-blue {
+    border-left: 3px solid rgba(26, 117, 254, 1);
+}
+.text-white {
+    color: white;
+} */
+
+/*FOOTER */
+footer {
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 1.9rem;
+}
+
+
+footer h2 {
+    margin-bottom: 20px;
+}
+footer p {
+    font-size: 1.6rem;
+}
+footer .sponsor {
+    padding-top: 40px;
+    justify-content: space-evenly;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.76);
+    letter-spacing: 1px;
+}
+
+iframe {
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    /* filter: invert(100%); */
+}
+
+
+
+
+
+.whitebg {
+    background-color: white;
+}
+.venue {
+    margin-bottom: 30px;
+    font-size: 1.9rem;
+}
+.venue h2 {
+    margin-bottom: 20px;
+}
+.sopstheatre {
+    background-image: url(./images/sopstheatre.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.maplocation {
+    height: 500px;
+    margin-bottom: 30px;
+}
+
+/* LOCATION */
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.scroll-smooth {
+    scroll-behavior: smooth;
+}
+
+@media only screen and (min-width: 1000px) {
+    /* RESPONSIVENESS FOR THE VENUE SECTION */
+    .venuectn{
+        display: flex;
+        justify-content: space-between;
+    }
+    .sopstheatre {
+        width: 48%;
+    }
+    .maplocation {
+        width: 48%;
+    }
+  }
+
+
+
+
